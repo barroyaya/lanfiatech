@@ -16,4 +16,4 @@ import lanfiara_website
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'lanfiara_website.settings')
 
 application = get_wsgi_application()
-web: lanfiara_website.wsgi
+
