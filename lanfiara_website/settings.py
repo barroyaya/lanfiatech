@@ -121,6 +121,10 @@ USE_TZ = True
 STATIC_URL = 'statics/'
 STATICFILES_DIRS = [BASE_DIR / 'statics']
 
+import os
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 MEDIA_URL = '/media/'
