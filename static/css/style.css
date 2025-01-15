@@ -1,0 +1,137 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFFFFF;
+    margin: 0;
+    color: #333;
+}
+
+header {
+    background-color: #1A3B75;
+    color: #FFFFFF;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    display: flex; /* Utilisation de flexbox */
+    justify-content: center; /* Centrer les éléments horizontalement */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Espacement entre le logo et le menu */
+    align-items: center; /* Centrer verticalement */
+    width: 80%; /* Réduire la largeur du conteneur */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    justify-content: center; /* Centrer les éléments de navigation */
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #48A9E6;
+}
+
+/* Le footer n'est plus fixé, il reste en bas du contenu */
+footer {
+    background-color: #1A3B75;
+    color: #FFFFFF;
+    padding: 20px 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.header-container, .footer-container, main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+main {
+    margin-top: 120px; /* Laisser de l'espace en haut pour éviter que le contenu passe sous le header fixe */
+    padding: 20px 0;
+}
+
+h1, h2 {
+    color: #1A3B75;
+    margin-bottom: 20px;
+}
+
+button.cta, a.cta {
+    background-color: #48A9E6;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button.cta:hover, a.cta:hover {
+    background-color: #1A3B75;
+}
+
+.solutions-grid, .media-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.solution-card, .media-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    flex: 1 1 30%;
+    box-sizing: border-box;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters .filter {
+    background: #48A9E6;
+    color: #fff;
+    margin-right: 10px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.filters .filter:hover {
+    background: #1A3B75;
+}
+
+.footer-links a, .footer-social a {
+    color: #FFFFFF;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover, .footer-social a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .solutions-grid, .media-grid {
+        flex-direction: column;
+    }
+}
