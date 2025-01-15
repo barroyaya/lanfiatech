@@ -430,22 +430,22 @@ button.cta:hover, a.cta:hover {
     text-decoration: underline;
 }
 
-/*!* Footer positionné en bas de la page *!*/
-/*footer {*/
-/*    background-color: #1A3B75;*/
-/*    color: #FFFFFF;*/
-/*    padding: 20px 0;*/
-/*    width: 100%;*/
-/*    !* Le footer n'est pas fixe, il se situe en bas grâce à Flexbox sur le body *!*/
-/*}*/
+/* Footer positionné en bas de la page */
+footer {
+    background-color: #1A3B75;
+    color: #FFFFFF;
+    padding: 20px 0;
+    width: 100%;
+    /* Le footer n'est pas fixe, il se situe en bas grâce à Flexbox sur le body */
+}
 
-/*!* Responsive : adaptabilité sur petits écrans *!*/
-/*@media (max-width: 768px) {*/
-/*    nav ul {*/
-/*        flex-direction: column;*/
-/*        align-items: flex-start;*/
-/*    }*/
-/*    .solutions-grid, .media-grid {*/
-/*        flex-direction: column;*/
-/*    }*/
-/*}*/
+/* Responsive : adaptabilité sur petits écrans */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .solutions-grid, .media-grid {
+        flex-direction: column;
+    }
+}
