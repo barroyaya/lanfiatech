@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block title %}{{ article.title }} - Lanfiara Group{% endblock %}
+{% block content %}
+<h1>{{ article.title }}</h1>
+<p>Publié le {{ article.published_date|date:"d/m/Y" }}</p>
+<div>{{ article.content|safe }}</div>
+{% endblock %}

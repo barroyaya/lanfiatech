@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Médiathèque - Lanfiara Group{% endblock %}
+{% block content %}
+<h1>Médiathèque</h1>
+<div class="filters">
+    <button class="filter" data-filter="video">Vidéos</button>
+    <button class="filter" data-filter="photo">Photos</button>
+    <button class="filter" data-filter="doc">Documents</button>
+    <button class="filter" data-filter="all">Tous</button>
+</div>
+
+<div class="media-grid">
+    {% for media in medias %}
+    <div class="media-item" data-type="{{ media.media_type }}">
+        {% if media.media_type == 'video' %}
+            <!-- Vidéo (iframe YouTube) -->
+            <div class="video-wrapper">
+                <iframe width="560" height="315" src="{{ media.video_url }}" frameborder="0" allowfullscreen></iframe>
+            </div>
+        {% elif media.media_type == 'photo' %}
+            <img src="{{ media.image.url }}" alt="{{ media.title }}">
+            <p>{{ media.title }}</p>
+        {% elif media.media_type == 'doc' %}
+            <p>{{ media.title }}</p>
+            <a href="{{ media.file.url }}" class="cta" download>Télécharger</a>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

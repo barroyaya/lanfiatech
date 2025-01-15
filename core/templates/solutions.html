@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Nos Solutions - Lanfiara Group{% endblock %}
+{% block content %}
+<h1>Nos Solutions</h1>
+<div class="solutions-grid">
+    <div class="solution-card">
+        <img src="{% static 'images/visitrack_icon.png' %}" alt="VisiTrack360">
+        <h2>VisiTrack360</h2>
+        <p>Collecte de données publicitaires.</p>
+        <a class="cta" href="{% url 'solution_detail' 'visitrack360' %}">En savoir plus</a>
+    </div>
+    <div class="solution-card">
+        <img src="{% static 'images/lanfiasave_icon.png' %}" alt="LanfiaSave">
+        <h2>LanfiaSave</h2>
+        <p>Gestion des dons pour les populations vulnérables.</p>
+        <a class="cta" href="{% url 'solution_detail' 'lanfiasave' %}">En savoir plus</a>
+    </div>
+    <div class="solution-card">
+        <img src="{% static 'images/lanfiapay_icon.png' %}" alt="LanfiaPay">
+        <h2>LanfiaPay</h2>
+        <p>Optimisation fiscale des collectivités.</p>
+        <a class="cta" href="{% url 'solution_detail' 'lanfiapay' %}">En savoir plus</a>
+    </div>
+</div>
+{% endblock %}

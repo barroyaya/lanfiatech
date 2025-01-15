@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block title %}Médiathèque - Lanfiara Group{% endblock %}
+
+{% block content %}
+<style>
+    .filters button {
+        cursor: pointer;
+        margin-right: 10px;
+        padding: 10px 20px;
+        background-color: #48A9E6;
+        border: none;
+        color: white;
+        border-radius: 5px;
+    }
+    .filters button:hover {
+        background-color: #1A3B75;
+    }
+    .media-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+    .media-item {
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+    .video-wrapper, .media-item video, .media-item iframe {
+        width: 100%; /* prend la largeur maximale du conteneur */
+        aspect-ratio: 16 / 9; /* Garde un ratio de 16:9 */
+        border-radius: 5px;
+    }
+    .media-item img {
+        width: 100%; /* adapte les images pour qu'elles prennent toute la largeur */
+        height: auto; /* ajuste la hauteur tout en préservant le ratio */
+        border-radius: 5px;
+    }
+    .cta {
+        display: inline-block;
+        padding: 10px 15px;
+        background-color: #48A9E6;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    .cta:hover {
+        background-color: #1A3B75;
+    }
+</style>
+
+<h1>Médiathèque</h1>
+<div class="filters">
+    <button class="filter" data-filter="video">Vidéos</button>
+    <button class="filter" data-filter="photo">Photos</button>
+    <button class="filter" data-filter="doc">Documents</button>
+    <button class="filter" data-filter="all">Tous</button>
+</div>
+
+<div class="media-grid">
+    {% for media in medias %}
+    <div class="media-item" data-type="{{ media.media_type }}">
+        {% if media.media_type == 'video' %}
+            {% if media.embed_url %}
+                <div class="video-wrapper">
+                    <iframe class="responsive-iframe"
+                        src="{{ media.embed_url }}" 
+                        frameborder="0" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            {% elif media.video_file %}
+                <video class="responsive-video" controls>
+                    <source src="{{ media.video_file.url }}" type="video/mp4">
+                    Votre navigateur ne supporte pas la vidéo.
+                </video>
+            {% else %}
+                <p>Aucune source vidéo disponible.</p>
+            {% endif %}
+        {% elif media.media_type == 'photo' %}
+            {% if media.image %}
+                <img src="{{ media.image.url }}" alt="{{ media.title }}">
+                <p>{{ media.title }}</p>
+            {% else %}
+                <p>Image non disponible.</p>
+            {% endif %}
+        {% elif media.media_type == 'doc' %}
+            {% if media.file %}
+                <p>{{ media.title }}</p>
+                <a href="{{ media.file.url }}" class="cta" download>Télécharger</a>
+            {% else %}
+                <p>Document non disponible.</p>
+            {% endif %}
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

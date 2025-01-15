@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Nos Solutions - Lanfiara Group{% endblock %}
+
+{% block content %}
+<!-- Début du contenu de la page -->
+<h1>Nos Solutions</h1>
+<div class="solutions-grid">
+    <div class="solution-card">
+        <img src="{% static 'images/vitrick.png' %}" alt="VisiTrack360">
+        <h2>VisiTrack360</h2>
+        <p>Collecte de données publicitaires.</p>
+        <a class="cta" href="{% url 'solution_detail' 'visitrack360' %}">En savoir plus</a>
+    </div>
+    <div class="solution-card">
+        <img src="{% static 'images/img.png' %}" alt="LanfiaSave">
+        <h2>LanfiaSave</h2>
+        <p>Gestion des dons pour les populations vulnérables.</p>
+        <a class="cta" href="{% url 'solution_detail' 'lanfiasave' %}">En savoir plus</a>
+    </div>
+    <div class="solution-card">
+        <img src="{% static 'images/img_2.png' %}" alt="LanfiaPay">
+        <h2>LanfiaPay</h2>
+        <p>Optimisation fiscale des collectivités.</p>
+        <a class="cta" href="{% url 'solution_detail' 'lanfiapay' %}">En savoir plus</a>
+    </div>
+</div>
+
+<!-- Style CSS -->
+<style>
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #FFFFFF;
+        margin: 0;
+        color: #333;
+    }
+
+    header {
+        background-color: #1A3B75;
+        color: #FFFFFF;
+        padding: 20px 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav a {
+        color: #FFFFFF;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    nav a:hover {
+        color: #48A9E6;
+    }
+
+    /* Le footer n'est plus fixé, il reste en bas du contenu */
+    footer {
+        background-color: #1A3B75;
+        color: #FFFFFF;
+        padding: 20px 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .header-container, .footer-container, main {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Mise en page des solutions */
+    main {
+        margin-top: 120px;
+        padding: 20px 0;
+    }
+
+    h1, h2 {
+        color: #1A3B75;
+        margin-bottom: 20px;
+    }
+
+    .solutions-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .solution-card {
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 20px;
+        flex: 1 1 30%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .solution-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .cta {
+        background-color: #48A9E6;
+        color: #FFFFFF;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .cta:hover {
+        background-color: #1A3B75;
+    }
+
+    /* Responsivité mobile */
+    @media (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .solutions-grid {
+            flex-direction: column;
+        }
+    }
+</style>
+
+{% endblock %}

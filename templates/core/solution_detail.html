@@ -1,0 +1,372 @@
+{#{% extends 'base.html' %}#}
+{#{% load static %}#}
+{#{% block title %}{{ solution.name }} - Lanfiara Group{% endblock %}#}
+{#{% block content %}#}
+{#<h1>{{ solution.name }}</h1>#}
+{#<img src="{% static 'images/'|add:solution.icon %}" alt="{{ solution.name }}">#}
+{#<p>{{ solution.description }}</p>#}
+{#{% endblock %}#}
+
+
+{#{% extends 'base.html' %}#}
+{#{% load static %}#}
+
+{#{% block title %}{{ solution.name }} - Lanfiara Group{% endblock %}#}
+{##}
+{#{% block content %}#}
+{#<div class="container my-5">#}
+{#    <div class="row align-items-center">#}
+{#        <div class="col-md-6">#}
+{#            <h1 class="text-success fw-bold">{{ solution.name }}</h1>#}
+{#            <p class="lead">{{ solution.description }}</p>#}
+{#            <a href="#" class="btn btn-outline-success btn-lg mt-3">Discover More</a>#}
+{#        </div>#}
+{#        <div class="col-md-6 text-center">#}
+{#            <img src="{% static 'images/'|add:solution.icon %}" alt="{{ solution.name }}" class="img-fluid rounded shadow-lg">#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+{#{% endblock %}#}
+{##}
+{#<style>#}
+{#    body {#}
+{#        font-family: 'Arial', sans-serif;#}
+{#        background-color: #a31616;#}
+{#    }#}
+{##}
+{#    h1 {#}
+{#        font-size: 2.5rem;#}
+{#    }#}
+{##}
+{#    .lead {#}
+{#        font-size: 1.25rem;#}
+{#        color: #6c757d;#}
+{#    }#}
+{##}
+{#    .btn-outline-success {#}
+{#        color: #28a745;#}
+{#        border-color: #28a745;#}
+{#    }#}
+{##}
+{#    .btn-outline-success:hover {#}
+{#        color: #6a1111;#}
+{#        background-color: #28a745;#}
+{#        border-color: #28a745;#}
+{#    }#}
+{##}
+{#    .img-fluid {#}
+{#        max-width: 100%;#}
+{#        height: auto;#}
+{#    }#}
+{##}
+{#    .rounded {#}
+{#        border-radius: 0.5rem;#}
+{#    }#}
+{##}
+{#    .shadow-lg {#}
+{#        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);#}
+{#    }#}
+{#</style>#}
+
+
+
+
+
+
+
+
+
+
+
+{#{% extends 'base.html' %}#}
+{#{% load static %}#}
+{##}
+{#{% block title %}{{ solution.name }} - Lanfiara Group{% endblock %}#}
+{##}
+{#{% block content %}#}
+{#<div class="container my-5">#}
+{#    <!-- Header Section -->#}
+{#    <div class="row align-items-center">#}
+{#        <div class="col-md-6">#}
+{#            <h1 class="text-success fw-bold">{{ solution.name }}</h1>#}
+{#            <p class="lead">{{ solution.description }}</p>#}
+{#            <a href="#features" class="btn btn-outline-success btn-lg mt-3">Découvrir les fonctionnalités</a>#}
+{#        </div>#}
+{#        <div class="col-md-6 text-center">#}
+{#            <img src="{% static 'images/'|add:solution.icon %}" alt="{{ solution.name }}" class="img-fluid rounded shadow-lg">#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{#    <!-- Features Section -->#}
+{#    <section id="features" class="mt-5">#}
+{#        <h2 class="text-center text-primary fw-bold mb-4">Fonctionnalités clés</h2>#}
+{#        <div class="row">#}
+{#            <div class="col-md-4 text-center">#}
+{#                <i class="fas fa-donate fa-3x text-success mb-3"></i>#}
+{#                <h5 class="fw-bold">Gestion des dons</h5>#}
+{#                <p>Optimisez la collecte et la distribution des dons pour les populations vulnérables.</p>#}
+{#            </div>#}
+{#            <div class="col-md-4 text-center">#}
+{#                <i class="fas fa-chart-line fa-3x text-success mb-3"></i>#}
+{#                <h5 class="fw-bold">Suivi en temps réel</h5>#}
+{#                <p>Visualisez l’impact des dons grâce à des tableaux de bord détaillés.</p>#}
+{#            </div>#}
+{#            <div class="col-md-4 text-center">#}
+{#                <i class="fas fa-shield-alt fa-3x text-success mb-3"></i>#}
+{#                <h5 class="fw-bold">Sécurité des transactions</h5>#}
+{#                <p>Assurez une traçabilité et une sécurité maximales des fonds.</p>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+{##}
+{#    <!-- Statistics Section -->#}
+{#    <section id="stats" class="mt-5 py-5 bg-light">#}
+{#        <h2 class="text-center text-primary fw-bold mb-4">Statistiques et Impact</h2>#}
+{#        <div class="row text-center">#}
+{#            <div class="col-md-4">#}
+{#                <h3 class="text-success fw-bold">500+</h3>#}
+{#                <p>Familles aidées</p>#}
+{#            </div>#}
+{#            <div class="col-md-4">#}
+{#                <h3 class="text-success fw-bold">$200K+</h3>#}
+{#                <p>Fonds collectés</p>#}
+{#            </div>#}
+{#            <div class="col-md-4">#}
+{#                <h3 class="text-success fw-bold">50+</h3>#}
+{#                <p>Partenaires engagés</p>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+{##}
+{#    <!-- Testimonials Section -->#}
+{#    <section id="testimonials" class="mt-5">#}
+{#        <h2 class="text-center text-primary fw-bold mb-4">Ce que disent nos utilisateurs</h2>#}
+{#        <div class="row">#}
+{#            <div class="col-md-6">#}
+{#                <div class="card shadow border-0 mb-4">#}
+{#                    <div class="card-body">#}
+{#                        <blockquote class="blockquote">#}
+{#                            <p class="mb-0">"LanfiaSave a changé notre manière de gérer les dons. C'est un outil puissant et simple à utiliser."</p>#}
+{#                            <footer class="blockquote-footer">Marie K., Gestionnaire d'ONG</footer>#}
+{#                        </blockquote>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="col-md-6">#}
+{#                <div class="card shadow border-0 mb-4">#}
+{#                    <div class="card-body">#}
+{#                        <blockquote class="blockquote">#}
+{#                            <p class="mb-0">"Une solution complète pour connecter les donateurs et les bénéficiaires en toute transparence."</p>#}
+{#                            <footer class="blockquote-footer">Jean D., Donateur</footer>#}
+{#                        </blockquote>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+{##}
+{#    <!-- Call to Action Section -->#}
+{#    <section id="cta" class="mt-5 text-center py-5 bg-success text-white">#}
+{#        <h2 class="fw-bold mb-4">Rejoignez le mouvement avec LanfiaSave</h2>#}
+{#        <p class="mb-4">Faites partie de la solution et contribuez à faire une différence.</p>#}
+{#        <a href="#contact" class="btn btn-light btn-lg">Nous contacter</a>#}
+{#    </section>#}
+{#</div>#}
+{#{% endblock %}#}
+{##}
+{#<style>#}
+{#    body {#}
+{#        font-family: 'Arial', sans-serif;#}
+{#        background-color: #f9f9f9;#}
+{#    }#}
+{##}
+{#    .fw-bold {#}
+{#        font-weight: bold;#}
+{#    }#}
+{##}
+{#    .lead {#}
+{#        font-size: 1.25rem;#}
+{#        color: #6c757d;#}
+{#    }#}
+{##}
+{#    .btn-outline-success {#}
+{#        color: #28a745;#}
+{#        border-color: #28a745;#}
+{#    }#}
+{##}
+{#    .btn-outline-success:hover {#}
+{#        color: #fff;#}
+{#        background-color: #28a745;#}
+{#        border-color: #28a745;#}
+{#    }#}
+{##}
+{#    .bg-light {#}
+{#        background-color: #f8f9fa !important;#}
+{#    }#}
+{##}
+{#    .bg-success {#}
+{#        background-color: #28a745 !important;#}
+{#    }#}
+{##}
+{#    .text-primary {#}
+{#        color: #007bff !important;#}
+{#    }#}
+{##}
+{#    .text-success {#}
+{#        color: #28a745 !important;#}
+{#    }#}
+{##}
+{#    .text-white {#}
+{#        color: #fff !important;#}
+{#    }#}
+{##}
+{#    .card {#}
+{#        border-radius: 0.5rem;#}
+{#    }#}
+{##}
+{#    .card-body blockquote {#}
+{#        font-size: 1rem;#}
+{#        color: #6c757d;#}
+{#    }#}
+{##}
+{#    .rounded {#}
+{#        border-radius: 0.5rem;#}
+{#    }#}
+{##}
+{#    .shadow {#}
+{#        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;#}
+{#    }#}
+{##}
+{#    .img-fluid {#}
+{#        max-width: 100%;#}
+{#        height: auto;#}
+{#    }#}
+{#</style>#}
+
+
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ solution.name }} - Lanfiara Group{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h1 class="text-success fw-bold">{{ solution.name }}</h1>
+            <p class="lead">{{ solution.description }}</p>
+            <a href="#stats" class="btn btn-outline-success btn-lg mt-3">Voir les statistiques</a>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="{% static 'images/'|add:solution.icon %}" alt="{{ solution.name }}" class="img-fluid rounded shadow-lg">
+        </div>
+    </div>
+</div>
+
+<div id="stats" class="container my-5">
+    <h2 class="text-center text-primary fw-bold">Statistiques d'Impact</h2>
+    <div class="row text-center my-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm p-4">
+                <h3 class="text-success">Familles aidées</h3>
+                <p class="display-4 fw-bold">{{ stats.families_helped }}</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm p-4">
+                <h3 class="text-success">Enfants soutenus</h3>
+                <p class="display-4 fw-bold">{{ stats.children_helped }}</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm p-4">
+                <h3 class="text-success">Femmes aidées</h3>
+                <p class="display-4 fw-bold">{{ stats.women_helped }}</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="text-center text-primary fw-bold">Évolution de la pauvreté</h2>
+    <div class="my-4">
+        <img src="{% static 'images/poverty_chart.png' %}" alt="Graphique d'évolution de la pauvreté" class="img-fluid rounded shadow-lg">
+    </div>
+
+    <div class="row my-4">
+        <div class="col-md-6">
+            <div class="card shadow-sm p-4">
+                <h3 class="text-success">Total des dons collectés</h3>
+                <p class="display-4 fw-bold">{{ stats.total_donations }} FCFA</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card shadow-sm p-4">
+                <h3 class="text-success">Projets réalisés</h3>
+                <p class="display-4 fw-bold">{{ stats.projects_completed }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f9f9f9;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .lead {
+        font-size: 1.25rem;
+        color: #6c757d;
+    }
+
+    .btn-outline-success {
+        color: #28a745;
+        border-color: #28a745;
+    }
+
+    .btn-outline-success:hover {
+        color: #fff;
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .rounded {
+        border-radius: 0.5rem;
+    }
+
+    .shadow-lg {
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    }
+
+    .card {
+        border: none;
+    }
+
+    .card h3 {
+        font-size: 1.5rem;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+        color: #495057;
+    }
+
+    .text-success {
+        color: #28a745 !important;
+    }
+
+    .text-primary {
+        color: #007bff !important;
+    }
+</style>

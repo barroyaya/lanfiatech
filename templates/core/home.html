@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Accueil - Lanfiara Group{% endblock %}
+{% block content %}
+<section class="hero">
+    <h1>Solutions innovantes au service du développement local</h1>
+    <p>Découvrez comment nos solutions digitales aident les collectivités à optimiser leurs ressources.</p>
+</section>
+
+<section class="solutions-preview">
+    <h2>Nos Solutions</h2>
+    <div class="solutions-grid">
+        <div class="solution-card">
+            <img src="{% static 'images/vitrick.png' %}" alt="VisiTrack360 Icon">
+            <h3>VisiTrack360</h3>
+            <p>Collecte de données publicitaires.</p>
+        </div>
+        <div class="solution-card">
+            <img src="{% static 'images/img.png' %}" alt="LanfiaSave Icon">
+            <h3>LanfiaSave</h3>
+            <p>Gestion des dons pour les populations vulnérables.</p>
+        </div>
+        <div class="solution-card">
+            <img src="{% static 'images/img_2.png' %}" alt="LanfiaPay Icon">
+            <h3>LanfiaPay</h3>
+            <p>Optimisation fiscale des collectivités.</p>
+        </div>
+    </div>
+    <button class="cta" onclick="window.location.href='{% url 'mediatheque' %}'">Accéder à la Médiathèque</button>
+</section>
+
+<style>
+    .solutions-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .solution-card {
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 20px;
+        flex: 1 1 30%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .solution-card img {
+        width: 100%; /* L'image prend toute la largeur du conteneur */
+        height: 200px; /* Fixer la hauteur de l'image */
+        object-fit: cover; /* Remplir l'espace sans déformation */
+        border-radius: 10px; /* Arrondir les coins de l'image */
+        margin-bottom: 20px; /* Espace sous l'image */
+    }
+
+    .cta {
+        background-color: #48A9E6;
+        color: #FFFFFF;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .cta:hover {
+        background-color: #1A3B75;
+    }
+
+    @media (max-width: 768px) {
+        .solutions-grid {
+            flex-direction: column;
+        }
+    }
+</style>
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}Actualités - Lanfiara Group{% endblock %}
+{% block content %}
+<div class="container my-5">
+    <h1 class="text-center text-primary">Actualités</h1>
+    <div class="row">
+        {% for article in articles %}
+        <div class="col-md-4 mb-4">
+            <div class="card shadow">
+                {% if article.image %}
+                <img src="{{ article.image.url }}" alt="{{ article.title }}" class="card-img-top" style="height: 200px; object-fit: cover;">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ article.title }}</h5>
+                    <p class="card-text text-muted">Publié le {{ article.published_date|date:"d/m/Y" }}</p>
+                    <a href="{% url 'blog_detail' article.slug %}" class="btn btn-primary">Lire plus</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+
+<style>
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #f8f9fa;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .card {
+        border: none;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .btn-outline-primary {
+        color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #007bff;
+        color: #fff;
+    }
+</style>

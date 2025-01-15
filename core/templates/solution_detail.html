@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block title %}{{ solution.name }} - Lanfiara Group{% endblock %}
+{% block content %}
+<h1>{{ solution.name }}</h1>
+<img src="{% static 'images/'|add:solution.icon %}" alt="{{ solution.name }}">
+<p>{{ solution.description }}</p>
+{% endblock %}

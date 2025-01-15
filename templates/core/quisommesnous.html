@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Qui sommes-nous ? - Lanfiara Group{% endblock %}
+{% block content %}
+<div class="container my-5">
+    <h1 class="text-center text-primary fw-bold">Qui sommes-nous ?</h1>
+    <p class="text-center lead">Notre mission est d'accompagner les collectivités locales dans leur digitalisation, en proposant des solutions innovantes et efficaces.</p>
+    <p class="text-center text-muted">Nos valeurs : <strong>Transparence</strong>, <strong>Innovation</strong>, <strong>Proximité</strong></p>
+    
+    <!-- Image prenant toute la largeur -->
+    <div class="image-container my-4">
+        <img src="{% static 'images/equipe.jpg' %}" alt="Equipe Lanfiara Group" style="width: 100%; max-height: 600px; object-fit: cover;">
+    </div>
+</div>
+{% endblock %}

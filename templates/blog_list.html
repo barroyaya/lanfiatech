@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Actualités - Lanfiara Group{% endblock %}
+{% block content %}
+<h1>Actualités</h1>
+<ul>
+    {% for article in articles %}
+    <li>
+        <a href="{% url 'blog_detail' article.slug %}">{{ article.title }}</a> - {{ article.published_date|date:"d/m/Y" }}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

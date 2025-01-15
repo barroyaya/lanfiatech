@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block title %}{{ article.title }} - Lanfiara Group{% endblock %}
+{% block content %}
+<div class="container my-5">
+    <h1 class="text-primary">{{ article.title }}</h1>
+    <p class="text-muted">Publié le {{ article.published_date|date:"d/m/Y" }}</p>
+    {% if article.image %}
+    <img src="{{ article.image.url }}" alt="{{ article.title }}" class="img-fluid rounded shadow-lg mb-4">
+    {% endif %}
+    <div class="article-content">
+        {{ article.content|safe }}
+    </div>
+    </div>
+
+    <!-- Boutons de navigation ou partage -->
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <a href="{% url 'blog_list' %}" class="btn btn-outline-primary me-2">
+                <i class="fas fa-arrow-left"></i> Retour aux actualités
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" class="btn btn-outline-secondary me-2" target="_blank">
+                <i class="fab fa-facebook"></i> Partager sur Facebook
+            </a>
+            <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ article.title }}" class="btn btn-outline-info" target="_blank">
+                <i class="fab fa-twitter"></i> Partager sur Twitter
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<style>
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #f9f9f9;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .text-muted {
+        font-size: 0.9rem;
+    }
+
+    hr {
+        border-top: 2px solid #007bff;
+        margin: 1.5rem 0;
+    }
+
+    .article-content {
+        font-size: 1.1rem;
+    }
+
+    .btn-outline-primary {
+        color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    .btn-outline-secondary:hover {
+        background-color: #6c757d;
+        color: #fff;
+    }
+
+    .btn-outline-info:hover {
+        background-color: #17a2b8;
+        color: #fff;
+    }
+</style>

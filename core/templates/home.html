@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Accueil - Lanfiara Group{% endblock %}
+{% block content %}
+<section class="hero">
+    <h1>Solutions innovantes au service du développement local</h1>
+    <p>Découvrez comment nos solutions digitales aident les collectivités à optimiser leurs ressources.</p>
+</section>
+
+<section class="solutions-preview">
+    <h2>Nos Solutions</h2>
+    <div class="solutions-grid">
+        <div class="solution-card">
+            <img src="{% static 'images/visitrack_icon.png' %}" alt="VisiTrack360 Icon">
+            <h3>VisiTrack360</h3>
+            <p>Collecte de données publicitaires.</p>
+        </div>
+        <div class="solution-card">
+            <img src="{% static 'images/lanfiasave_icon.png' %}" alt="LanfiaSave Icon">
+            <h3>LanfiaSave</h3>
+            <p>Gestion des dons pour les populations vulnérables.</p>
+        </div>
+        <div class="solution-card">
+            <img src="{% static 'images/lanfiapay_icon.png' %}" alt="LanfiaPay Icon">
+            <h3>LanfiaPay</h3>
+            <p>Optimisation fiscale des collectivités.</p>
+        </div>
+    </div>
+    <button class="cta" onclick="window.location.href='{% url 'mediatheque' %}'">Accéder à la Médiathèque</button>
+</section>
+{% endblock %}
