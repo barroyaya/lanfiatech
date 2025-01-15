@@ -201,8 +201,8 @@ nav a:hover {
 
 /* Espace pour ne pas être caché par le header fixe */
 main {
-    flex: 1; /* pour que main prenne l'espace restant */
-    margin-top: 120px; /* ajustez si nécessaire selon la hauteur du header */
+    flex: 1; /* main prend l'espace restant */
+    margin-top: 120px; /* ajustez selon la hauteur du header */
     padding: 20px 0;
 }
 
@@ -212,7 +212,7 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
-/* Boutons et liens avec CTA */
+/* Boutons et liens CTA */
 button.cta, a.cta {
     background-color: #48A9E6;
     color: #FFFFFF;
